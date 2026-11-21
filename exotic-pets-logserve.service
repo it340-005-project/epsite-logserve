@@ -1,0 +1,11 @@
+[Unit]
+Description=Exotic Pets audit log server
+After=network.target
+
+[Service]
+WorkingDirectory=/srv/epsite-logserve
+ExecStart=/usr/bin/node server.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
